@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Libera as imagens dos produtos vindas da DummyJSON no next/image.
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "cdn.dummyjson.com" }],
+  },
   experimental: {
     agentFeedback: true,
   },
